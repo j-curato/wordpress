@@ -1,0 +1,24 @@
+/*
+ Theme Name: GeneratePress Child
+ Theme URI: https://generatepress.com
+ Description: GeneratePress Child Theme
+ Author: TechCare I.T. Solutions
+ Author URI: http://example.com
+ Template: generatepress
+ Version: 1.5
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  GeneratePress-child
+*/
+
+.site-header, .site-info{
+	display: none;
+}
+
+div.find-us{
+
+	border-left: 1px solid #232323;
+	border-style: dashed;
+	
+}
