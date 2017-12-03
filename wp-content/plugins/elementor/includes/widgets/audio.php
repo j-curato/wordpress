@@ -20,8 +20,9 @@ class Widget_Audio extends Widget_Base {
 	protected $_current_instance = [];
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve audio widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -31,8 +32,9 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve audio widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -42,8 +44,9 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve audio widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -53,10 +56,11 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the list of categories the widget belongs to.
+	 * Retrieve the list of categories the audio widget belongs to.
 	 *
 	 * Used to determine where to display the widget in the editor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return array Widget categories.
@@ -66,10 +70,11 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register audio widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -221,10 +226,11 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render audio widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -248,6 +254,16 @@ class Widget_Audio extends Widget_Base {
 		endif;
 	}
 
+	/**
+	 * Filter audio widget oEmbed results.
+	 *
+	 * Written in PHP and used to generate the final HTML.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @param string $html The HTML returned by the oEmbed provider.
+	 */
 	public function filter_oembed_result( $html ) {
 		$param_keys = [
 			'auto_play',
@@ -284,10 +300,11 @@ class Widget_Audio extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output in the editor.
+	 * Render audio widget output in the editor.
 	 *
 	 * Written as a Backbone JavaScript template and used to generate the live preview.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _content_template() {}

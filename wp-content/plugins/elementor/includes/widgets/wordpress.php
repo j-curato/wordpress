@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_WordPress extends Widget_Base {
 
 	/**
-	 * Widget name.
+	 * WordPress widget name.
 	 *
 	 * @access private
 	 *
@@ -20,7 +20,7 @@ class Widget_WordPress extends Widget_Base {
 	private $_widget_name = null;
 
 	/**
-	 * Widget instance.
+	 * WordPress widget instance.
 	 *
 	 * @access private
 	 *
@@ -29,19 +29,21 @@ class Widget_WordPress extends Widget_Base {
 	private $_widget_instance = null;
 
 	/**
-	 * Whether the widget is is a Pojo widget.
+	 * Whether the widget is a Pojo widget or not.
 	 *
+	 * @since 1.0.0
 	 * @access private
 	 *
-	 * @return \Pojo_Widget_Base
+	 * @return bool
 	 */
 	private function _is_pojo_widget() {
 		return $this->get_widget_instance() instanceof \Pojo_Widget_Base;
 	}
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve WordPress/Pojo widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -51,8 +53,9 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve WordPress/Pojo widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -62,10 +65,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the list of categories the widget belongs to.
+	 * Retrieve the list of categories the WordPress/Pojo widget belongs to.
 	 *
 	 * Used to determine where to display the widget in the editor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return array Widget categories. Returns either a WordPress category or Pojo category.
@@ -80,8 +84,9 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve WordPress/Pojo widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon. Returns either a WordPress icon or Pojo icon.
@@ -94,10 +99,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Whether the reload preview is required.
+	 * Whether the reload preview is required or not.
 	 *
 	 * Used to determine whether the reload preview is required.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return bool Whether the reload preview is required.
@@ -107,10 +113,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget form.
+	 * Retrieve WordPress/Pojo widget form.
 	 *
 	 * Returns the WordPress widget form, to be used in Elementor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget form.
@@ -129,10 +136,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget instance.
+	 * Retrieve WordPress/Pojo widget instance.
 	 *
 	 * Returns an instance of WordPress widget, to be used in Elementor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return \WP_Widget
@@ -153,11 +161,12 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the parsed settings.
+	 * Retrieve WordPress/Pojo widget parsed settings.
 	 *
 	 * Returns the WordPress widget settings, to be used in Elementor.
 	 *
-	 * @access public
+	 * @access protected
+	 * @since 1.0.0
 	 *
 	 * @return \WP_Widget
 	 */
@@ -172,10 +181,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register WordPress/Pojo widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -191,10 +201,11 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render WordPress/Pojo widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -212,20 +223,25 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output in the editor.
+	 * Render WordPress/Pojo widget output in the editor.
 	 *
 	 * Written as a Backbone JavaScript template and used to generate the live preview.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function content_template() {}
 
 	/**
-	 * Class constructor.
+	 * WordPress/Pojo widget constructor.
 	 *
 	 * Used to run WordPress widget constructor.
 	 *
+	 * @since 1.0.0
 	 * @access public
+	 *
+	 * @param array $data Widget data. Default is an empty array.
+	 * @param array $args Widget arguments. Default is null.
 	 */
 	public function __construct( $data = [], $args = null ) {
 		$this->_widget_name = $args['widget_name'];
@@ -234,11 +250,14 @@ class Widget_WordPress extends Widget_Base {
 	}
 
 	/**
-	 * Render as plain content.
+	 * Render WordPress/Pojo widget as plain content.
 	 *
 	 * Override the default render behavior, don't render widget content.
 	 *
+	 * @since 1.0.0
 	 * @access public
+	 *
+	 * @param array $instance Widget instance. Default is empty array.
 	 */
 	public function render_plain_content( $instance = [] ) {}
 }

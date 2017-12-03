@@ -11,8 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_Shortcode extends Widget_Base {
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve shortcode widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -22,8 +23,9 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve shortcode widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -33,8 +35,9 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve shortcode widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -44,10 +47,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the list of categories the widget belongs to.
+	 * Retrieve the list of categories the shortcode widget belongs to.
 	 *
 	 * Used to determine where to display the widget in the editor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return array Widget categories.
@@ -57,10 +61,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Whether the reload preview is required.
+	 * Whether the reload preview is required or not.
 	 *
 	 * Used to determine whether the reload preview is required.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return bool Whether the reload preview is required.
@@ -70,10 +75,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register shortcode widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -98,10 +104,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render shortcode widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -114,10 +121,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Render the plain content.
+	 * Render shortcode widget as plain content.
 	 *
 	 * Override the default behavior by printing the shortcode insted of rendering it.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 */
 	public function render_plain_content() {
@@ -126,10 +134,11 @@ class Widget_Shortcode extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output in the editor.
+	 * Render shortcode widget output in the editor.
 	 *
 	 * Written as a Backbone JavaScript template and used to generate the live preview.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _content_template() {}

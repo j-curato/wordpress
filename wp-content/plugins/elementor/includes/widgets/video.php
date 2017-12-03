@@ -11,8 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_Video extends Widget_Base {
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve video widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -22,8 +23,9 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve video widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -33,8 +35,9 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve video widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -44,10 +47,11 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register video widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -91,7 +95,7 @@ class Widget_Video extends Widget_Base {
 				'label' => __( 'Vimeo Link', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'placeholder' => __( 'Enter your Vimeo link', 'elementor' ),
-				'default' => 'https://vimeo.com/170933924',
+				'default' => 'https://vimeo.com/235215203',
 				'label_block' => true,
 				'condition' => [
 					'video_type' => 'vimeo',
@@ -529,10 +533,11 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render video widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -608,10 +613,11 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Render as plain content.
+	 * Render video widget as plain content.
 	 *
 	 * Override the default behavior, by printing the video URL insted of rendering it.
 	 *
+	 * @since 1.4.5
 	 * @access public
 	 */
 	public function render_plain_content() {
@@ -622,8 +628,9 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve embed parameters.
+	 * Retrieve video widget embed parameters.
 	 *
+	 * @since 1.5.0
 	 * @access public
 	 *
 	 * @return array Video embed parameters.
@@ -667,8 +674,9 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve hosted parameters.
+	 * Retrieve video widget hosted parameters.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 *
 	 * @return array Video hosted parameters.
@@ -698,10 +706,11 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
-	 * Whether the video has an overlay image.
+	 * Whether the video widget has an overlay image or not.
 	 *
 	 * Used to determine whether an overlay image was set for the video.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 *
 	 * @return bool Whether an image overlay was set for the video.

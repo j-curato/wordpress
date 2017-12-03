@@ -11,8 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_Button extends Widget_Base {
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve button widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -22,8 +23,9 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve button widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -33,8 +35,9 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve button widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -46,6 +49,7 @@ class Widget_Button extends Widget_Base {
 	/**
 	 * Retrieve button sizes.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 *
@@ -62,10 +66,11 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register button widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -370,10 +375,11 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render button widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -414,10 +420,11 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output in the editor.
+	 * Render button widget output in the editor.
 	 *
 	 * Written as a Backbone JavaScript template and used to generate the live preview.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _content_template() {
@@ -430,7 +437,7 @@ class Widget_Button extends Widget_Base {
 						<i class="{{ settings.icon }}"></i>
 					</span>
 					<# } #>
-					<span class="elementor-button-text">{{{ settings.text }}}</span>
+					<span class="elementor-button-text elementor-inline-editing" data-elementor-setting-key="text" data-elementor-inline-editing-toolbar="none">{{{ settings.text }}}</span>
 				</span>
 			</a>
 		</div>
@@ -438,8 +445,9 @@ class Widget_Button extends Widget_Base {
 	}
 
 	/**
-	 * Render the button widget.
+	 * Render button widget text.
 	 *
+	 * @since 1.5.0
 	 * @access protected
 	 */
 	protected function render_text() {
@@ -447,6 +455,10 @@ class Widget_Button extends Widget_Base {
 		$this->add_render_attribute( 'content-wrapper', 'class', 'elementor-button-content-wrapper' );
 		$this->add_render_attribute( 'icon-align', 'class', 'elementor-align-icon-' . $settings['icon_align'] );
 		$this->add_render_attribute( 'icon-align', 'class', 'elementor-button-icon' );
+
+		$this->add_render_attribute( 'text', 'class', 'elementor-button-text' );
+
+		$this->add_inline_editing_attributes( 'text', 'none' );
 		?>
 		<span <?php echo $this->get_render_attribute_string( 'content-wrapper' ); ?>>
 			<?php if ( ! empty( $settings['icon'] ) ) : ?>
@@ -454,7 +466,7 @@ class Widget_Button extends Widget_Base {
 				<i class="<?php echo esc_attr( $settings['icon'] ); ?>"></i>
 			</span>
 			<?php endif; ?>
-			<span class="elementor-button-text"><?php echo $settings['text']; ?></span>
+			<span <?php echo $this->get_render_attribute_string( 'text' ); ?>><?php echo $settings['text']; ?></span>
 		</span>
 		<?php
 	}

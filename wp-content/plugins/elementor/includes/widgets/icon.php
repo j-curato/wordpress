@@ -11,8 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_Icon extends Widget_Base {
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve icon widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -22,8 +23,9 @@ class Widget_Icon extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve icon widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -33,8 +35,9 @@ class Widget_Icon extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve icon widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -44,10 +47,11 @@ class Widget_Icon extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register icon widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -310,10 +314,11 @@ class Widget_Icon extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render icon widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -356,10 +361,11 @@ class Widget_Icon extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output in the editor.
+	 * Render icon widget output in the editor.
 	 *
 	 * Written as a Backbone JavaScript template and used to generate the live preview.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _content_template() {

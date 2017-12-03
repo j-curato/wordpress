@@ -11,8 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_Image_Gallery extends Widget_Base {
 
 	/**
-	 * Retrieve the widget name.
+	 * Retrieve image gallery widget name.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -22,8 +23,9 @@ class Widget_Image_Gallery extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget title.
+	 * Retrieve image gallery widget title.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -33,8 +35,9 @@ class Widget_Image_Gallery extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the widget icon.
+	 * Retrieve image gallery widget icon.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -44,10 +47,11 @@ class Widget_Image_Gallery extends Widget_Base {
 	}
 
 	/**
-	 * Retrieve the list of categories the widget belongs to.
+	 * Retrieve the list of categories the image gallery widget belongs to.
 	 *
 	 * Used to determine where to display the widget in the editor.
 	 *
+	 * @since 1.0.0
 	 * @access public
 	 *
 	 * @return array Widget categories.
@@ -61,6 +65,7 @@ class Widget_Image_Gallery extends Widget_Base {
 	 *
 	 * Used to add lightbox data attributes to image link HTML.
 	 *
+	 * @since 1.6.0
 	 * @access public
 	 *
 	 * @param string $link_html Image link HTML.
@@ -72,10 +77,11 @@ class Widget_Image_Gallery extends Widget_Base {
 	}
 
 	/**
-	 * Register the widget controls.
+	 * Register image gallery widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -332,10 +338,11 @@ class Widget_Image_Gallery extends Widget_Base {
 	}
 
 	/**
-	 * Render the widget output on the frontend.
+	 * Render image gallery widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
+	 * @since 1.0.0
 	 * @access protected
 	 */
 	protected function render() {
@@ -379,13 +386,4 @@ class Widget_Image_Gallery extends Widget_Base {
 		</div>
 		<?php
 	}
-
-	/**
-	 * Render the widget output in the editor.
-	 *
-	 * Written as a Backbone JavaScript template and used to generate the live preview.
-	 *
-	 * @access protected
-	 */
-	protected function _content_template() {}
 }
